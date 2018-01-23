@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :get_category, only: [:show, :edit, :update, :destroy]
 
   def new
   end
@@ -19,9 +20,17 @@ class CategoriesController < ApplicationController
   end
 
   def index
+    @categories = Category.all
   end
 
   def show
+    @sub_category = @category.sub_categories
   end
-  
+
+  private
+
+  def get_category
+    @category = Category.find(params[:id])
+  end
+
 end

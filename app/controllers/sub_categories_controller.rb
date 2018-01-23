@@ -1,5 +1,5 @@
 class SubCategoriesController < ApplicationController
-
+before_action :get_sub_category, only: [:show]
   def new
   end
 
@@ -22,5 +22,12 @@ class SubCategoriesController < ApplicationController
   end
 
   def show
+    @posts = @sub_category.posts
+  end
+
+  private
+
+  def get_sub_category
+    @sub_category = SubCategory.find(params[:id])
   end
 end
