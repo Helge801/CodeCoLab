@@ -1,3 +1,11 @@
+<h1>Sub Categories</h1>
+
 <% @sub_category.each do |cat| %>
   <%= link_to cat.name, cat %>
 <% end %>
+
+<hr>
+
+<div>
+  <%= link_to "Make a new Sub Category", new_sub_category_path %>
+</div>
