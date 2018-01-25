@@ -29,3 +29,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.4'
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'faker', '~> 1.8', '>= 1.8.7'
+gem 'materialize-sass', '~> 0.100.2'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
