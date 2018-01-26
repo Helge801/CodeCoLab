@@ -1,3 +1,13 @@
 <div class="sidebar_wrapper">
-  
+  <% @categories.each do |cat| %>
+    <button class="accordion">
+      <%= link_to cat.name, "#" %>
+    </button>
+    <div class="panel">
+      <% cat.sub_categories.each do |sub_cat| %>
+        <%=link_to sub_cat.name, sub_cat, class: "sub_sidebar_item" %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
+  <script type="text/javascript" src="javascript/lib/accordian.js"></script>
