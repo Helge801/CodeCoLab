@@ -35,12 +35,15 @@ class PostsController < ApplicationController
 
   def show
     @post
+    @sub_category = SubCategory
+    @category
   end
 
   private 
 
     def get_post
       @post = Post.find(params[:id])
+
     end
 
     def post_params

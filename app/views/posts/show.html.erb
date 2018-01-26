@@ -1,3 +1,12 @@
 <h1>Post</h1>
 
+  <nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <%= link_to @post.sub_category.category.name, sub_categories_path(@post.sub_category.category), class: "breadcrumb" %>
+        <%= link_to @post.sub_category.name, sub_categories_path(@post.sub_category), class: "breadcrumb" %>
+      </div>
+    </div>
+  </nav>
+
 <%= @post.body %>
