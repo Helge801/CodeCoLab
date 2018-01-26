@@ -35,6 +35,7 @@ class CategoriesController < ApplicationController
 
   def show
     @sub_category = @category.sub_categories
+    @categories = Category.all
   end
 
   private

@@ -32,6 +32,7 @@ before_action :get_sub_category, only: [:show]
   end
 
   def show
+    @categories = Category.all
     @posts = @sub_category.posts
   end
 
